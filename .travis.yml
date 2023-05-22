@@ -3,8 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t Coniix/docker-react -f Dockerfile.dev .
+  - docker build -t coniix/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true Coniix/docker-react npm run test
-  
+  - docker run -e CI=true coniix/docker-react npm run test
